@@ -48,6 +48,21 @@
   .pick::before,.pick::after{content:"";position:absolute;top:50%;width:26px;height:1px;background:var(--line);}
   .pick::before{left:calc(50% - 118px);} .pick::after{right:calc(50% - 118px);}
 
+  /* ---------- Kickoff (inici de temporada) ---------- */
+  .kickoff{position:relative;overflow:hidden;background:var(--black);color:#fff;border-radius:20px;padding:26px 24px 24px;margin:30px 0 8px;text-align:center;}
+  .kickoff::before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--green);}
+  .ko-kick{font-family:var(--f-meta);text-transform:uppercase;letter-spacing:.2em;font-size:11px;font-weight:600;color:var(--green);margin:0 0 8px;}
+  .ko-h{font-family:var(--f-display);font-style:italic;font-weight:900;text-transform:uppercase;line-height:.95;font-size:clamp(24px,6.5vw,36px);margin:0 0 18px;}
+  .ko-days{display:flex;gap:14px;justify-content:center;margin:0 0 18px;}
+  .ko-day{flex:1;max-width:230px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:16px 14px;display:flex;flex-direction:column;align-items:center;gap:2px;}
+  .ko-dnum{font-family:var(--f-display);font-style:italic;font-weight:900;text-transform:uppercase;font-size:clamp(24px,6.5vw,36px);line-height:.9;color:var(--green);}
+  .ko-dm{font-family:var(--f-meta);text-transform:uppercase;letter-spacing:.12em;font-size:10px;color:var(--grey-2);}
+  .ko-cat{font-family:var(--f-body);font-weight:700;font-size:13.5px;color:#fff;margin-top:8px;line-height:1.3;}
+  .ko-note{font-size:13.5px;line-height:1.55;color:#e9e9e5;margin:0 auto 14px;max-width:46ch;}
+  .ko-note b{color:#fff;}
+  .ko-cta{display:inline-flex;align-items:center;gap:8px;font-family:var(--f-meta);text-transform:uppercase;letter-spacing:.08em;font-size:12.5px;font-weight:700;color:var(--black);background:var(--green);padding:12px 20px;border-radius:24px;transition:transform .16s ease,box-shadow .16s ease;}
+  .ko-cta:hover{transform:translateY(-2px);box-shadow:0 14px 30px -14px rgba(137,205,36,.7);}
+
   /* ---------- Document cards ---------- */
   .cards{display:flex;flex-direction:column;gap:16px;margin-top:8px;}
   .card{display:flex;align-items:center;gap:18px;padding:20px 22px;background:#fff;border:1px solid var(--line);border-radius:18px;position:relative;overflow:hidden;transition:transform .16s ease,box-shadow .16s ease,border-color .16s ease;}
@@ -83,6 +98,7 @@
     .card .ic svg{width:24px;height:24px;}
     .card .arw{display:none;}
     .pick::before{left:calc(50% - 104px);} .pick::after{right:calc(50% - 104px);}
+    .ko-days{flex-direction:column;align-items:stretch;} .ko-day{max-width:none;}
   }
 </style>
 
@@ -99,6 +115,25 @@
 <main class="wrap">
 
   <p class="intro">Benvolgudes famílies, aquí teniu tota la informació de la temporada en un sol lloc. Trieu el document que vulgueu consultar.</p>
+
+  <section class="kickoff" aria-label="Començament de la temporada">
+    <p class="ko-kick">Comença la temporada 26-27</p>
+    <h2 class="ko-h">Setmana d'inici d'entrenaments</h2>
+    <div class="ko-days">
+      <div class="ko-day">
+        <span class="ko-dnum">Dilluns 7</span>
+        <span class="ko-dm">de setembre</span>
+        <span class="ko-cat">Sub-14 i categories superiors</span>
+      </div>
+      <div class="ko-day">
+        <span class="ko-dnum">Dimarts 8</span>
+        <span class="ko-dm">de setembre</span>
+        <span class="ko-cat">Sub-6, Sub-8, Sub-10 i Sub-12</span>
+      </div>
+    </div>
+    <p class="ko-note">Encara no has formalitzat la matrícula? <b>Fes-la ara</b> per assegurar la plaça de l'atleta de cara a la nova temporada:</p>
+    <a class="ko-cta" href="https://app.cluber.es/legacy/clubes/662fc525765de012579250/inscripcion" target="_blank" rel="noopener">Inici de temporada · Matrícula →</a>
+  </section>
 
   <div class="pick">Els documents</div>
 
