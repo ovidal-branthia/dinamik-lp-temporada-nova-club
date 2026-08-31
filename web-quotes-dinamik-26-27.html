@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#0A0A0A">
 <title>Nova estructura de quotes · Dinami-K · 2026/27</title>
-<meta name="description" content="La nova estructura de quotes i el model esportiu de l'Escola d'Atletisme Dinami-K per a la temporada 2026/27: tres programes, quotes clares i reserva anticipada.">
+<meta name="description" content="La nova estructura de quotes i el model esportiu de l'Escola d'Atletisme Dinami-K per a la temporada 2026/27: tres programes, quotes clares i com confirmar la plaça.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:ital,wght@0,600;0,700;0,800;0,900;1,800;1,900&family=Oswald:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -55,6 +55,7 @@
   }
   .topbar .inner{max-width:var(--wrap);margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;}
   .topbar img{height:26px;width:auto;display:block;}
+  .topbar .hm{display:block;line-height:0;text-decoration:none;}
   .topbar span{font-family:var(--f-meta);text-transform:uppercase;letter-spacing:.16em;font-size:10px;color:var(--grey-2);text-align:right;}
 
   /* ---------- Cover ---------- */
@@ -575,24 +576,6 @@
     .pricesum .psh{flex-wrap:wrap;align-items:flex-start;}
   }
 
-  /* ---------- Lock-rate ribbon (matrícula = mantén els preus) ---------- */
-  .lockrate{display:flex;align-items:center;gap:16px;margin:16px 0 26px;padding:18px 22px;background:var(--black);color:#fff;border-radius:16px;position:relative;overflow:hidden;box-shadow:0 14px 34px -22px rgba(10,10,10,.6);}
-  .lockrate::after{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--green);}
-  .lockrate .lric{flex:none;width:48px;height:48px;border-radius:13px;background:rgba(137,205,36,.16);display:flex;align-items:center;justify-content:center;}
-  .lockrate .lric svg{width:25px;height:25px;stroke:var(--green);stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round;}
-  .lockrate .lrb{flex:1;min-width:0;}
-  .lockrate .lrk{font-family:var(--f-meta);text-transform:uppercase;letter-spacing:.16em;font-size:10.5px;color:var(--green);font-weight:600;}
-  .lockrate .lrt{font-family:var(--f-display);font-style:italic;font-weight:800;text-transform:uppercase;font-size:clamp(18px,4.9vw,24px);line-height:1.06;color:#fff;margin:5px 0 6px;}
-  .lockrate .lrt .hl{color:var(--green);}
-  .lockrate .lrd{font-size:13.5px;line-height:1.5;color:#d7d7d2;margin:0;}
-  .lockrate .lrd strong{color:#fff;font-weight:700;}
-  .lockrate .lrd a{color:var(--green);font-weight:600;text-decoration:none;white-space:nowrap;}
-  .lockrate .lrd a:hover{text-decoration:underline;}
-  @media (max-width:560px){
-    .lockrate{flex-direction:column;align-items:flex-start;gap:12px;padding:16px 18px;}
-  }
-
-
   /* ---------- Programs relationship map (section 02 intro) ---------- */
   .progmap{border:1px solid var(--line);border-radius:16px;background:var(--paper);padding:18px 18px 20px;margin:18px 0 26px;}
   .progmap .pmh{font-family:var(--f-meta);text-transform:uppercase;letter-spacing:.14em;font-size:11px;color:var(--green-d);font-weight:600;margin-bottom:14px;}
@@ -644,7 +627,7 @@
 
 <div class="topbar" id="top">
   <div class="inner">
-    <img src="assets/lockup_light.png" alt="Dinami-K · Club Atletisme Vilanova i la Geltrú">
+    <a class="hm" href="../" aria-label="Inici · Documents Dinami-K"><img src="assets/lockup_light.png" alt="Dinami-K · Club Atletisme Vilanova i la Geltrú"></a>
     <span>Quotes · Temporada 2026/27</span>
   </div>
 </div>
@@ -670,7 +653,7 @@
   <div class="stats">
     <div class="tile"><div class="num">3</div><div class="lbl">Programes esportius, cadascun amb el seu valor</div></div>
     <div class="tile"><div class="num">2</div><div class="lbl">Costos separats: quota esportiva i federació a part</div></div>
-    <div class="tile"><div class="num"><span style="font-size:.42em;">fins </span>9<span style="font-size:.5em;"> agost</span></div><div class="lbl">Reserva anticipada mantenint els preus de la temporada 25-26</div></div>
+    <div class="tile"><div class="num">15%</div><div class="lbl">Descompte per pagament únic o per germans (no acumulables)</div></div>
   </div>
 
   <div class="callout dark big">
@@ -715,15 +698,6 @@
     <a class="pslink" href="#s02">Què vol dir cada programa <svg viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a>
   </section>
 
-  <div class="lockrate">
-    <span class="lric" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg></span>
-    <div class="lrb">
-      <div class="lrk">Avantatge · Reserva anticipada</div>
-      <div class="lrt">Fes la <span class="hl">matrícula abans del 9 d'agost</span> i mantén els preus de la temporada 25-26</div>
-      <p class="lrd">Amb la matrícula de <strong>50&nbsp;€</strong> assegures la plaça i <strong>conserves els preus de la temporada 25-26</strong>, sense increment per a la 2026/27. <a href="#s05">Com funciona&nbsp;→</a></p>
-    </div>
-  </div>
-
   <nav class="toc" aria-label="Contingut del document">
     <div class="toc-h">Contingut</div>
     <p class="toc-hint">Toca una secció per anar-hi directament.</p>
@@ -732,8 +706,7 @@
       <li><a href="#s02"><span class="tn">02</span><span class="tt">Tres programes i les quotes</span><span class="arw"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
       <li><a href="#s03"><span class="tn">03</span><span class="tt">Dubtes habituals, resolts</span><span class="arw"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
       <li><a href="#s04"><span class="tn">04</span><span class="tt">Cada camí compta</span><span class="arw"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
-      <li><a class="hot" href="#s05"><span class="tn">05</span><span class="tt">Reserva anticipada fins 9 agost</span><span class="arw"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
-      <li><a href="#s06"><span class="tn">06</span><span class="tt">Com confirmar la plaça</span><span class="arw"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
+      <li><a href="#s05"><span class="tn">05</span><span class="tt">Com confirmar la plaça</span><span class="arw"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
       <li style="grid-column:1 / -1;"><a href="#annex"><span class="tn tn-ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9.5h18M9 4v16"/></svg></span><span class="tt">Categories i any de naixement · annex</span><span class="arw"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
     </ol>
   </nav>
@@ -914,28 +887,14 @@
     </div>
   </div>
 
-  <!-- ============ 05 · RESERVA ANTICIPADA ============ -->
-  <h2 id="s05"><span class="n">05</span>Reserva anticipada i mantén els preus</h2>
-
-  <p>Per premiar les famílies que confirmen aviat la seva continuïtat —i per ajudar-nos a organitzar millor grups, entrenadors i horaris— tenim una <strong>campanya de reserva anticipada</strong>: bloquegeu els preus de la temporada 25-26 de cara a la nova temporada.</p>
-
-  <div class="callout big">
-    <div class="ct">L'avantatge de reservar aviat</div>
-    <p>Mantén els preus de les quotes de la temporada 25-26 per a les quotes de 2026/27.</p>
-  </div>
-
-  <p>Només has de <strong>formalitzar la matrícula de 50&nbsp;€ abans del 9 d'agost</strong>. Amb aquest pas assegures la plaça i <strong>conserves els preus de la temporada 25-26</strong>, sense cap increment de cara a la nova temporada.</p>
-
-  <p class="footnote" style="margin-top:14px;">Es mantenen les condicions de quota actuals, a excepció dels dies extra de tecnificació addicionals a l'escola base. L'accés a la tecnificació i al programa de projecció i alt rendiment depèn de <strong>criteris tècnics</strong> (edat, maduresa, seguretat, aprofitament, objectius) i de les places disponibles per disciplina, i ha de ser confirmat per la direcció tècnica per a cada atleta.</p>
-
-  <!-- ============ 06 · COM CONFIRMAR LA PLAÇA ============ -->
-  <h2 id="s06"><span class="n">06</span>Com confirmar la plaça</h2>
+  <!-- ============ 05 · COM CONFIRMAR LA PLAÇA ============ -->
+  <h2 id="s05"><span class="n">05</span>Com confirmar la plaça</h2>
 
   <ol class="tl">
     <li>
-      <div class="when">Abans del 9 d'agost</div>
+      <div class="when">Per començar</div>
       <h3>Formalitza la matrícula</h3>
-      <p>Amb el pagament de la matrícula de 50&nbsp;€ assegureu la plaça i bloquegeu els preus de la temporada 25-26 de cara a la nova temporada.</p>
+      <p>Amb el pagament de la matrícula de 50&nbsp;€ assegureu la plaça de l'atleta de cara a la nova temporada.</p>
       <a class="cta" href="https://app.cluber.es/clubes/662fc525765de012579250/pagos/6a5f83c2c0c40003755066" target="_blank" rel="noopener">Formalitza la matrícula a Cluber <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </li>
     <li>
@@ -1000,8 +959,7 @@
   <a href="#s02"><span class="tn">02</span>Tres programes i les quotes</a>
   <a href="#s03"><span class="tn">03</span>Dubtes habituals, resolts</a>
   <a href="#s04"><span class="tn">04</span>Cada camí compta</a>
-  <a href="#s05"><span class="tn">05</span>Reserva anticipada fins 9 agost</a>
-  <a href="#s06"><span class="tn">06</span>Com confirmar la plaça</a>
+  <a href="#s05"><span class="tn">05</span>Com confirmar la plaça</a>
   <a href="#annex"><span class="tn">＋</span>Categories i edats</a>
 </nav>
 <script>document.querySelectorAll(".navpanel a").forEach(function(a){a.addEventListener("click",function(){document.getElementById("navtoggle").checked=false;});});</script>
