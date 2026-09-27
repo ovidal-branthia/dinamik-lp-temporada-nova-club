@@ -71,8 +71,8 @@ Es reconstrueixen en HTML/CSS (les captures reals pesen massa). Dos formats:
 - Artifact (enllaç per a famílies): `Artifact` amb el mateix `file_path` → manté la URL. Actual: https://claude.ai/code/artifact/6affa43c-c0da-4b64-8f2d-ed680d927b87
 - Claude Design project `99c97f4c-52a9-4164-9d38-ecb087c35468`: `DesignSync write_files` a `Web Millores del Club Dinami-K 26-27 (CAT).html`.
 **Desplegar**: `index.html` (autònom) → repo git (`main`, ja inicialitzat) → GitHub → Vercel (estàtic, sense build).
-**Push (autenticació)**: el llavero de macOS només té `ovidal-taxhia-br` (sense permís). Cal el compte de `gh` `dinamik-ca` (ho executa l'usuari):
-`gh auth switch -u dinamik-ca && git -c credential.helper= -c credential.helper='!gh auth git-credential' push`
+**Push (autenticació)**: el llavero de macOS només té `ovidal-taxhia-br` (sense permís). Cal el compte de `gh` `ovidal-branthia` (ho executa l'usuari):
+`gh auth switch -u ovidal-branthia && git -c credential.helper= -c credential.helper='!gh auth git-credential' push && gh auth switch -u dinamik-ca`
 **Germà multiidioma**: https://novatemporada2627.dinamik.club/ es fa a `~/Documents/claude_projects/dinamik-new-26-27` (CA/ES/EN). Canvis de contingut (horaris, quotes…) s'han d'aplicar als DOS sites.
 
 ## Per fer un document NOU (quotes / horaris) amb la mateixa estructura
@@ -84,7 +84,7 @@ Es reconstrueixen en HTML/CSS (les captures reals pesen massa). Dos formats:
 6. Per al **hub**: portada simple amb 3 targetes (estil `.toc`/`.card`) enllaçant els 3 documents desplegats.
 
 ## Estat del site (fet)
-Site únic desplegable ja muntat i pujat a GitHub (`dinamik-ca/docs_t26_27`, branca `main`):
+Site únic desplegable ja muntat i pujat a GitHub (`ovidal-branthia/docs_t26_27`, branca `main`; transferit des de `dinamik-ca` el 2026-09-27):
 - `index.html` = hub (des de `web-hub-dinamik-26-27.html`, enllaços relatius `millores/` `quotes/` `horaris/`).
 - `millores/index.html`, `quotes/index.html`, `horaris/index.html` = versions autònomes.
 - Connectat a Vercel (projecte `docs-t26-27`, equip `dinamik-ca`) → prod: **https://temporada2627.dinamik.club/** (també https://docs-t26-27.vercel.app/). Cada `push` a `main` desplega.
