@@ -87,7 +87,7 @@ Es reconstrueixen en HTML/CSS (les captures reals pesen massa). Dos formats:
 Site únic desplegable ja muntat i pujat a GitHub (`dinamik-ca/docs_t26_27`, branca `main`):
 - `index.html` = hub (des de `web-hub-dinamik-26-27.html`, enllaços relatius `millores/` `quotes/` `horaris/`).
 - `millores/index.html`, `quotes/index.html`, `horaris/index.html` = versions autònomes.
-- Connectat a Vercel (projecte de l'equip `dinamik-ca`): cada `push` a `main` desplega.
+- Connectat a Vercel (projecte `docs-t26-27`, equip `dinamik-ca`) → prod: **https://temporada2627.dinamik.club/** (també https://docs-t26-27.vercel.app/). Cada `push` a `main` desplega.
 
 ## Restriccions apreses
 - ⚠️ **Charset**: els fitxers autònoms en format Artifact (comencen amb `<title>`) NO porten `<meta charset>` ni `<!DOCTYPE>`; l'embolcall de l'Artifact els afegeix, però **servits directes (Vercel/http.server) donen mojibake** amb accents/·. Per a desplegament cal anteposar `<!DOCTYPE html>` + `<meta charset="UTF-8">` + viewport a cada `index.html`.
