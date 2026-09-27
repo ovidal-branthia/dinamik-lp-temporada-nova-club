@@ -89,6 +89,11 @@ Site únic desplegable ja muntat i pujat a GitHub (`ovidal-branthia/docs_t26_27`
 - `millores/index.html`, `quotes/index.html`, `horaris/index.html` = versions autònomes.
 - Connectat a Vercel (projecte `docs-t26-27`, equip `dinamik-ca`) → prod: **https://temporada2627.dinamik.club/** (també https://docs-t26-27.vercel.app/). Cada `push` a `main` desplega.
 
+## Multiidioma (CA/ES/EN) — des del 2026-09-27
+- Fonts: `web-<doc>-dinamik-26-27.html` (CA), `web-<doc>-es-26-27.html`, `web-<doc>-en-26-27.html` (docs: hub, millores, quotes, horaris). **Alineades línia a línia**: un canvi a CA s'ha de fer a la mateixa línia d'ES i EN.
+- Selector d'idioma `.langsw` a la capçalera (rutes absolutes `/`, `/es/`, `/en/` + `/<doc>/`). Traduccions reaprofitades del site germà `dinamik-new-26-27` + textos propis traduïts.
+- Build: `python3 build/assemble.py web-….html artifact-<doc>-<lang>.html` (lang = dinamik/es/en) → `cp` a `<doc>/index.html`, `es/<doc>/index.html`, `en/<doc>/index.html` (hub → `index.html`, `es/index.html`, `en/index.html`).
+
 ## Restriccions apreses
 - ⚠️ **Charset**: els fitxers autònoms en format Artifact (comencen amb `<title>`) NO porten `<meta charset>` ni `<!DOCTYPE>`; l'embolcall de l'Artifact els afegeix, però **servits directes (Vercel/http.server) donen mojibake** amb accents/·. Per a desplegament cal anteposar `<!DOCTYPE html>` + `<meta charset="UTF-8">` + viewport a cada `index.html`.
 - `DesignSync get_file` talla a 256 KiB (captures a alta resolució arriben incompletes; però la sortida es persisteix a disc i es pot processar amb python).
