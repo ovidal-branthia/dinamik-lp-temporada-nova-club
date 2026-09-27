@@ -134,6 +134,9 @@
   .tlb .cc{font-weight:700;font-size:15.5px;color:var(--black);line-height:1.2;margin-top:4px;}
   .tlb .dd{font-size:13px;color:var(--grey);line-height:1.32;margin-top:3px;}
   .tlb .tg{margin-left:auto;font-family:var(--f-meta);text-transform:uppercase;letter-spacing:.04em;font-size:11px;font-weight:600;color:#fff;padding:3px 9px;border-radius:5px;line-height:1.2;white-space:nowrap;}
+  .tlb.xs{display:flex;flex-wrap:wrap;align-items:center;align-content:center;column-gap:8px;padding:0 10px;}
+  .tlb.xs .hh{font-family:var(--f-meta);font-weight:600;font-size:12.5px;color:var(--green-ink);font-variant-numeric:tabular-nums;line-height:1.1;}
+  .tlb.xs .cc{font-size:13px;line-height:1.1;margin-top:0;}
   .tg.tec{background:var(--green-d);} .tg.esc{background:var(--grey-2);} .tg.alt{background:var(--black);}
   .tlnote{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:12.5px;color:var(--grey);margin:2px 0 16px;}
   .tlnote b{color:var(--ink);font-weight:700;}
@@ -195,6 +198,15 @@
     .legend{gap:9px 18px;}
     .sum{grid-template-columns:1fr;}
   }
+  @media (max-width:520px){
+    .tlline,.tlarea{left:48px;right:8px;}
+    .tllab{left:2px;width:38px;font-size:11.5px;}
+    .tlb.cmp{padding:7px 7px 7px 8px;}
+    .tlb.cmp .tg{display:none;}                                  /* el color ja indica el programa */
+    .tlb.cmp .tt .hh{font-size:12.5px;}
+    .tlb.cmp .cc{font-size:13.5px;margin-top:3px;hyphens:auto;}
+    .tlb.cmp .dd{font-size:12px;hyphens:auto;}
+  }
   @media (max-width:400px){
     .topbar span{display:none;}
   }
@@ -248,9 +260,9 @@
     <div class="toc-h">La setmana d'un cop d'ull</div>
     <p class="toc-hint">Toca un dia per anar-hi directament.</p>
     <ol class="toc-list">
-      <li><a href="#dl"><span class="tn">Dl</span><span class="tt">Dilluns<small>4 sessions</small></span><span class="arw"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
+      <li><a href="#dl"><span class="tn">Dl</span><span class="tt">Dilluns<small>6 sessions</small></span><span class="arw"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
       <li><a href="#dt"><span class="tn">Dt</span><span class="tt">Dimarts<small>4 sessions</small></span><span class="arw"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
-      <li><a href="#dc"><span class="tn">Dc</span><span class="tt">Dimecres<small>2 sessions</small></span><span class="arw"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
+      <li><a href="#dc"><span class="tn">Dc</span><span class="tt">Dimecres<small>1 sessió</small></span><span class="arw"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
       <li><a href="#dj"><span class="tn">Dj</span><span class="tt">Dijous<small>3 sessions</small></span><span class="arw"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
       <li><a href="#dv"><span class="tn">Dv</span><span class="tt">Divendres<small>5 sessions</small></span><span class="arw"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></li>
     </ol>
@@ -265,7 +277,7 @@
   <div class="week">
 
     <section class="tl" id="dl">
-      <div class="tlhd"><span class="dn">Dilluns</span><span class="dm">4 sessions</span></div>
+      <div class="tlhd"><span class="dn">Dilluns</span><span class="dm">6 sessions</span></div>
       <div class="tlbody" style="height:720px">
         <div class="tlline hr" style="top:0px"></div>
         <div class="tllab" style="top:0px">16:00</div>
@@ -285,10 +297,12 @@
         <div class="tlline hr" style="top:720px"></div>
         <div class="tllab" style="top:720px">21:00</div>
         <div class="tlarea">
-          <div class="tlb alt" style="top:1px;height:214px;left:calc(0.0000% + 3px);width:calc(100.0000% - 6px)"><div class="tt"><span class="hh">16:00–17:30</span><span class="tg alt">Alt rendiment</span></div><div class="cc">Alt rendiment</div><div class="dd">Llançaments</div></div>
-          <div class="tlb esc" style="top:217px;height:214px;left:calc(0.0000% + 3px);width:calc(100.0000% - 6px)"><div class="tt"><span class="hh">17:30–19:00</span><span class="tg esc">Escola</span></div><div class="cc">Sub 14+</div><div class="dd">Salts, tanques, velocitat i salts verticals</div></div>
-          <div class="tlb tec" style="top:433px;height:106px;left:calc(0.0000% + 3px);width:calc(50.0000% - 6px)"><div class="tt"><span class="hh">19:00–19:45</span><span class="tg tec">Tecnificació</span></div><div class="cc">Sub 14</div><div class="dd">Llançaments, alçada</div></div>
-          <div class="tlb alt" style="top:433px;height:286px;left:calc(50.0000% + 3px);width:calc(50.0000% - 6px)"><div class="tt"><span class="hh">19:00–21:00</span><span class="tg alt">Alt rendiment</span></div><div class="cc">Alt rendiment</div><div class="dd">Salts / velocitat</div></div>
+          <div class="tlb alt" style="top:1px;height:214px;left:calc(0.0000% + 3px);width:calc(50.0000% - 6px)"><div class="tt"><span class="hh">16:00–17:30</span><span class="tg alt">Alt rendiment</span></div><div class="cc">Alt rendiment</div><div class="dd">Llançaments</div></div>
+          <div class="tlb tec" style="top:73px;height:142px;left:calc(50.0000% + 3px);width:calc(50.0000% - 6px)"><div class="tt"><span class="hh">16:30–17:30</span><span class="tg tec">Tecnificació</span></div><div class="cc">Sub 14</div><div class="dd">Salts</div></div>
+          <div class="tlb esc cmp" style="top:217px;height:214px;left:calc(0.0000% + 3px);width:calc(33.3333% - 6px)"><div class="tt"><span class="hh">17:30–19:00</span><span class="tg esc">Escola</span></div><div class="cc">Sub 14+</div><div class="dd">Salts, tanques, velocitat i salts verticals</div></div>
+          <div class="tlb tec cmp" style="top:397px;height:106px;left:calc(33.3333% + 3px);width:calc(33.3333% - 6px)"><div class="tt"><span class="hh">18:45–19:30</span><span class="tg tec">Tecnificació</span></div><div class="cc">Sub 14</div><div class="dd">Llançaments</div></div>
+          <div class="tlb tec cmp" style="top:397px;height:142px;left:calc(66.6667% + 3px);width:calc(33.3333% - 6px)"><div class="tt"><span class="hh">18:45–19:45</span><span class="tg tec">Tecnificació</span></div><div class="cc">Sub 14</div><div class="dd">Alçada</div></div>
+          <div class="tlb alt cmp" style="top:433px;height:286px;left:calc(0.0000% + 3px);width:calc(33.3333% - 6px)"><div class="tt"><span class="hh">19:00–21:00</span><span class="tg alt">Alt rendiment</span></div><div class="cc">Alt rendiment</div><div class="dd">Salts / velocitat</div></div>
         </div>
       </div>
     </section>
@@ -313,14 +327,14 @@
         <div class="tlarea">
           <div class="tlb alt" style="top:1px;height:214px;left:calc(0.0000% + 3px);width:calc(100.0000% - 6px)"><div class="tt"><span class="hh">16:00–17:30</span><span class="tg alt">Alt rendiment</span></div><div class="cc">Alt rendiment</div><div class="dd">Salts i velocitat</div></div>
           <div class="tlb esc" style="top:217px;height:178px;left:calc(0.0000% + 3px);width:calc(100.0000% - 6px)"><div class="tt"><span class="hh">17:30–18:45</span><span class="tg esc">Escola</span></div><div class="cc">Grups per edat</div><div class="dd"><b>Sub 6-8</b> · <b>Sub 10</b> · <b>Sub 12</b></div></div>
-          <div class="tlb tec" style="top:397px;height:70px;left:calc(0.0000% + 3px);width:calc(50.0000% - 6px)"><div class="tt"><span class="hh">18:45–19:15</span><span class="tg tec">Tecnificació</span></div><div class="cc">Marxa i fons</div><div class="dd">Sub 10+</div></div>
-          <div class="tlb tec" style="top:397px;height:142px;left:calc(50.0000% + 3px);width:calc(50.0000% - 6px)"><div class="tt"><span class="hh">18:45–19:45</span><span class="tg tec">Tecnificació</span></div><div class="cc">Sub 10 / 12 / 14</div><div class="dd">Llançaments</div></div>
+          <div class="tlb tec xs" style="top:397px;height:34px;left:calc(0.0000% + 3px);width:calc(50.0000% - 6px)"><span class="hh">18:45–19:00</span><span class="cc">Fons · inclòs</span></div>
+          <div class="tlb tec cmp" style="top:397px;height:106px;left:calc(50.0000% + 3px);width:calc(50.0000% - 6px)"><div class="tt"><span class="hh">18:45–19:30</span><span class="tg tec">Tecnificació</span></div><div class="cc">Sub 10 / 12 / 14</div><div class="dd">Llançaments</div></div>
         </div>
       </div>
     </section>
 
     <section class="tl" id="dc">
-      <div class="tlhd"><span class="dn">Dimecres</span><span class="dm">2 sessions</span></div>
+      <div class="tlhd"><span class="dn">Dimecres</span><span class="dm">1 sessió</span></div>
       <div class="tlbody" style="height:432px">
         <div class="tlline hr" style="top:0px"></div>
         <div class="tllab" style="top:0px">16:00</div>
@@ -334,8 +348,7 @@
         <div class="tlline hr" style="top:432px"></div>
         <div class="tllab" style="top:432px">19:00</div>
         <div class="tlarea">
-          <div class="tlb esc" style="top:217px;height:214px;left:calc(0.0000% + 3px);width:calc(50.0000% - 6px)"><div class="tt"><span class="hh">17:30–19:00</span><span class="tg esc">Escola</span></div><div class="cc">Sub 14+</div><div class="dd">Velocitat, salts verticals i fons</div></div>
-          <div class="tlb tec" style="top:217px;height:214px;left:calc(50.0000% + 3px);width:calc(50.0000% - 6px)"><div class="tt"><span class="hh">17:30–19:00</span><span class="tg tec">Tecnificació</span></div><div class="cc">Sub 14</div><div class="dd">Salts i velocitat</div></div>
+          <div class="tlb esc" style="top:217px;height:214px;left:calc(0.0000% + 3px);width:calc(100.0000% - 6px)"><div class="tt"><span class="hh">17:30–19:00</span><span class="tg esc">Escola</span></div><div class="cc">Sub 14+</div><div class="dd">Velocitat, salts verticals i fons</div></div>
         </div>
       </div>
     </section>
@@ -360,7 +373,7 @@
         <div class="tlarea">
           <div class="tlb alt" style="top:1px;height:214px;left:calc(0.0000% + 3px);width:calc(100.0000% - 6px)"><div class="tt"><span class="hh">16:00–17:30</span><span class="tg alt">Alt rendiment</span></div><div class="cc">Alt rendiment</div><div class="dd">Salts i velocitat</div></div>
           <div class="tlb esc" style="top:217px;height:178px;left:calc(0.0000% + 3px);width:calc(100.0000% - 6px)"><div class="tt"><span class="hh">17:30–18:45</span><span class="tg esc">Escola</span></div><div class="cc">Grups per edat</div><div class="dd"><b>Sub 6-8</b> · <b>Sub 10</b> · <b>Sub 12</b></div></div>
-          <div class="tlb tec" style="top:397px;height:142px;left:calc(0.0000% + 3px);width:calc(100.0000% - 6px)"><div class="tt"><span class="hh">18:45–19:45</span><span class="tg tec">Tecnificació</span></div><div class="cc">Sub 10 / 12 / 14</div><div class="dd">Salts, velocitat i tanques</div></div>
+          <div class="tlb tec" style="top:397px;height:106px;left:calc(0.0000% + 3px);width:calc(100.0000% - 6px)"><div class="tt"><span class="hh">18:45–19:30</span><span class="tg tec">Tecnificació</span></div><div class="cc">Sub 10 / 12 / 14</div><div class="dd">Salts, velocitat i tanques</div></div>
         </div>
       </div>
     </section>
@@ -384,10 +397,10 @@
         <div class="tllab" style="top:576px">20:00</div>
         <div class="tlarea">
           <div class="tlb alt" style="top:1px;height:214px;left:calc(0.0000% + 3px);width:calc(100.0000% - 6px)"><div class="tt"><span class="hh">16:00–17:30</span><span class="tg alt">Alt rendiment</span></div><div class="cc">Alt rendiment</div><div class="dd">Llançaments</div></div>
-          <div class="tlb tec" style="top:217px;height:142px;left:calc(0.0000% + 3px);width:calc(33.3333% - 6px)"><div class="tt"><span class="hh">17:30–18:30</span><span class="tg tec">Tecnificació</span></div><div class="cc">Iniciació Perxa</div><div class="dd">Sub 10+</div></div>
-          <div class="tlb esc" style="top:217px;height:214px;left:calc(33.3333% + 3px);width:calc(33.3333% - 6px)"><div class="tt"><span class="hh">17:30–19:00</span><span class="tg esc">Escola</span></div><div class="cc">Sub 14+</div><div class="dd">Salts, tanques, velocitat i salts verticals</div></div>
-          <div class="tlb alt" style="top:217px;height:214px;left:calc(66.6667% + 3px);width:calc(33.3333% - 6px)"><div class="tt"><span class="hh">17:30–19:00</span><span class="tg alt">Alt rendiment</span></div><div class="cc">Alt rendiment</div><div class="dd">Salts i velocitat</div></div>
-          <div class="tlb tec" style="top:361px;height:142px;left:calc(0.0000% + 3px);width:calc(33.3333% - 6px)"><div class="tt"><span class="hh">18:30–19:30</span><span class="tg tec">Tecnificació</span></div><div class="cc">Perxa avançada</div><div class="dd">Sub 12+</div></div>
+          <div class="tlb tec cmp" style="top:217px;height:142px;left:calc(0.0000% + 3px);width:calc(33.3333% - 6px)"><div class="tt"><span class="hh">17:30–18:30</span><span class="tg tec">Tecnificació</span></div><div class="cc">Iniciació Perxa</div><div class="dd">Sub 10+</div></div>
+          <div class="tlb esc cmp" style="top:217px;height:214px;left:calc(33.3333% + 3px);width:calc(33.3333% - 6px)"><div class="tt"><span class="hh">17:30–19:00</span><span class="tg esc">Escola</span></div><div class="cc">Sub 14+</div><div class="dd">Salts, tanques, velocitat i salts verticals</div></div>
+          <div class="tlb alt cmp" style="top:217px;height:214px;left:calc(66.6667% + 3px);width:calc(33.3333% - 6px)"><div class="tt"><span class="hh">17:30–19:00</span><span class="tg alt">Alt rendiment</span></div><div class="cc">Alt rendiment</div><div class="dd">Salts i velocitat</div></div>
+          <div class="tlb tec cmp" style="top:361px;height:142px;left:calc(0.0000% + 3px);width:calc(33.3333% - 6px)"><div class="tt"><span class="hh">18:30–19:30</span><span class="tg tec">Tecnificació</span></div><div class="cc">Perxa avançada</div><div class="dd">Sub 12+</div></div>
         </div>
       </div>
     </section>
@@ -421,13 +434,14 @@
       </div>
     </div>
     <div class="sumcol tec">
-      <div class="sh"><span class="sn">Tecnificació</span><span class="sc">7 sessions</span></div>
+      <div class="sh"><span class="sn">Tecnificació</span><span class="sc">8 sessions</span></div>
       <div class="sumbody">
-      <div class="sumrow"><div class="top"><span class="day">Dilluns</span><span class="tm">19:00–19:45</span></div><div class="st">Sub 14</div><div class="ss">Llançaments, alçada</div></div>
-      <div class="sumrow"><div class="top"><span class="day">Dimarts</span><span class="tm">18:45–19:45</span></div><div class="st">Sub 10 / 12 / 14</div><div class="ss">Llançaments</div></div>
-      <div class="sumrow"><div class="top"><span class="day">Dimarts</span><span class="tm">18:45–19:15</span></div><div class="st">Marxa i fons</div><div class="ss">Sub 10+</div></div>
-      <div class="sumrow"><div class="top"><span class="day">Dimecres</span><span class="tm">17:30–19:00</span></div><div class="st">Sub 14</div><div class="ss">Salts i velocitat</div></div>
-      <div class="sumrow"><div class="top"><span class="day">Dijous</span><span class="tm">18:45–19:45</span></div><div class="st">Sub 10 / 12 / 14</div><div class="ss">Salts, velocitat i tanques</div></div>
+      <div class="sumrow"><div class="top"><span class="day">Dilluns</span><span class="tm">16:30–17:30</span></div><div class="st">Sub 14</div><div class="ss">Salts</div></div>
+      <div class="sumrow"><div class="top"><span class="day">Dilluns</span><span class="tm">18:45–19:30</span></div><div class="st">Sub 14</div><div class="ss">Llançaments</div></div>
+      <div class="sumrow"><div class="top"><span class="day">Dilluns</span><span class="tm">18:45–19:45</span></div><div class="st">Sub 14</div><div class="ss">Alçada</div></div>
+      <div class="sumrow"><div class="top"><span class="day">Dimarts</span><span class="tm">18:45–19:30</span></div><div class="st">Sub 10 / 12 / 14</div><div class="ss">Llançaments</div></div>
+      <div class="sumrow"><div class="top"><span class="day">Dimarts</span><span class="tm">18:45–19:00</span></div><div class="st">Fons</div><div class="ss">Sub 10+ · <b>Inclòs, sense cost addicional</b></div></div>
+      <div class="sumrow"><div class="top"><span class="day">Dijous</span><span class="tm">18:45–19:30</span></div><div class="st">Sub 10 / 12 / 14</div><div class="ss">Salts, velocitat i tanques</div></div>
       <div class="sumrow"><div class="top"><span class="day">Divendres</span><span class="tm">17:30–18:30</span></div><div class="st">Iniciació Perxa</div><div class="ss">Sub 10+</div></div>
       <div class="sumrow"><div class="top"><span class="day">Divendres</span><span class="tm">18:30–19:30</span></div><div class="st">Perxa avançada</div><div class="ss">Sub 12+</div></div>
       </div>
