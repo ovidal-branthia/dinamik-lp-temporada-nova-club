@@ -70,7 +70,9 @@ Es reconstrueixen en HTML/CSS (les captures reals pesen massa). Dos formats:
 **Publicar**:
 - Artifact (enllaç per a famílies): `Artifact` amb el mateix `file_path` → manté la URL. Actual: https://claude.ai/code/artifact/6affa43c-c0da-4b64-8f2d-ed680d927b87
 - Claude Design project `99c97f4c-52a9-4164-9d38-ecb087c35468`: `DesignSync write_files` a `Web Millores del Club Dinami-K 26-27 (CAT).html`.
-**Desplegar**: `index.html` (autònom) → repo git (`main`, ja inicialitzat) → GitHub → Vercel (estàtic, sense build).
+**Desplegar**: `<doc>/index.html` (autònom) → commit a `main` → push a `origin` (`ovidal-branthia/dinamik-nueva-temporada-26_27_LP`) → Vercel desplega a prod (estàtic, sense build).
+**Push (autenticació)**: el llavero de macOS només té `ovidal-taxhia-br`, que no té accés al repo. Cal fer-lo amb el compte de `gh` `ovidal-branthia` (ho executa l'usuari):
+`gh auth switch -u ovidal-branthia && git -c credential.helper= -c credential.helper='!gh auth git-credential' push && gh auth switch -u dinamik-ca`
 
 ## Per fer un document NOU (quotes / horaris) amb la mateixa estructura
 1. Parteix del `<head>`/`<style>` de la font actual (mateixos tokens i components).
@@ -81,10 +83,10 @@ Es reconstrueixen en HTML/CSS (les captures reals pesen massa). Dos formats:
 6. Per al **hub**: portada simple amb 3 targetes (estil `.toc`/`.card`) enllaçant els 3 documents desplegats.
 
 ## Estat del site (fet)
-Site únic desplegable ja muntat i pujat a GitHub (`dinamik-ca/docs_t26_27`, branca `main`):
+Site únic desplegable ja muntat. **Repo de producció: `ovidal-branthia/dinamik-nueva-temporada-26_27_LP`** (remot `origin`, branca `main`) → Vercel. L'antic `dinamik-ca/docs_t26_27` (remot `old-dinamik-ca`) ja NO es fa servir:
 - `index.html` = hub (des de `web-hub-dinamik-26-27.html`, enllaços relatius `millores/` `quotes/` `horaris/`).
 - `millores/index.html`, `quotes/index.html`, `horaris/index.html` = versions autònomes.
-- Falta: connectar el repo a Vercel perquè desplegui i cada `push` actualitzi.
+- Cada `push` a `main` del repo de producció desplega a Vercel.
 
 ## Restriccions apreses
 - ⚠️ **Charset**: els fitxers autònoms en format Artifact (comencen amb `<title>`) NO porten `<meta charset>` ni `<!DOCTYPE>`; l'embolcall de l'Artifact els afegeix, però **servits directes (Vercel/http.server) donen mojibake** amb accents/·. Per a desplegament cal anteposar `<!DOCTYPE html>` + `<meta charset="UTF-8">` + viewport a cada `index.html`.
