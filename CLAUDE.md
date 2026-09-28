@@ -84,7 +84,7 @@ Es reconstrueixen en HTML/CSS (les captures reals pesen massa). Dos formats:
 6. Per al **hub**: portada simple amb 3 targetes (estil `.toc`/`.card`) enllaçant els 3 documents desplegats.
 
 ## Estat del site (fet)
-Site únic desplegable ja muntat i pujat a GitHub (`ovidal-branthia/docs_t26_27`, branca `main`; transferit des de `dinamik-ca` el 2026-09-27):
+Site únic desplegable ja muntat i pujat a GitHub (`ovidal-branthia/dinamik-lp-temporada-nova-club`, privat, branca `main`; abans `dinamik-ca/docs_t26_27`):
 - `index.html` = hub (des de `web-hub-dinamik-26-27.html`, enllaços relatius `millores/` `quotes/` `horaris/`).
 - `millores/index.html`, `quotes/index.html`, `horaris/index.html` = versions autònomes.
 - Connectat a Vercel (projecte `docs-t26-27`, equip `dinamik-ca`) → prod: **https://temporada2627.dinamik.club/** (també https://docs-t26-27.vercel.app/). Cada `push` a `main` desplega.
@@ -95,6 +95,7 @@ Site únic desplegable ja muntat i pujat a GitHub (`ovidal-branthia/docs_t26_27`
 - Build: `python3 build/assemble.py web-….html artifact-<doc>-<lang>.html` (lang = dinamik/es/en) → `cp` a `<doc>/index.html`, `es/<doc>/index.html`, `en/<doc>/index.html` (hub → `index.html`, `es/index.html`, `en/index.html`).
 
 ## Restriccions apreses
+- ⚠️ **Vercel Hobby + repo privat**: si el repo és privat i el projecte és a l'equip Hobby `dinamik-ca`, Vercel **bloqueja** els desplegaments («Deployment was blocked»). Cal repo públic o projecte en un equip Pro.
 - ⚠️ **Charset**: els fitxers autònoms en format Artifact (comencen amb `<title>`) NO porten `<meta charset>` ni `<!DOCTYPE>`; l'embolcall de l'Artifact els afegeix, però **servits directes (Vercel/http.server) donen mojibake** amb accents/·. Per a desplegament cal anteposar `<!DOCTYPE html>` + `<meta charset="UTF-8">` + viewport a cada `index.html`.
 - `DesignSync get_file` talla a 256 KiB (captures a alta resolució arriben incompletes; però la sortida es persisteix a disc i es pot processar amb python).
 - Artifacts: CSP bloqueja fonts/imatges externes → cal incrustar-ho tot (per això la versió autònoma).
